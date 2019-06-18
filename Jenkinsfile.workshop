@@ -5,7 +5,7 @@ pipeline {
   stages {
     stage('Build JAR') {
       steps {
-        git url: 'http://gogs-ocp-workshop.apps.osevg.openshiftworkshop.com/userXY/nationalparks'
+        git url: 'https://github.com/jclaret/nationalparks'
         sh "cp .settings.xml ~/.m2/settings.xml"
         sh "mvn package"
       }
